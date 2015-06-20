@@ -1,0 +1,47 @@
+/**
+ * _1200_down.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *
+ * About this file:
+ * ----------------
+ * styles for devices bigger than 1200px
+ */
+
+@media (min-width: 1200px) {
+  #main-content-wrp {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+
+    .main-inner-wrp {
+      width: 900px;
+      margin: 0 auto;
+    }
+
+    .span_8 {
+      width: 75%;
+    }
+
+    .span_4 {
+      width: 25%;
+    }
+
+    //margin: auto;
+    //width: 900px;
+    //
+    //
+    //main {
+    //  width: 100%;
+    //}
+  }
+
+  #header-dropdown-wrp {
+    //width: 400px;
+    //position: absolute;
+    //right: 0px;
+  }
+}

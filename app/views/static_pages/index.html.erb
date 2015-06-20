@@ -1,0 +1,128 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<main id="home-search-wrp" data-stellar-background-ratio="0.5">
+  <script language="javascript" type="text/javascript" src="http://quickribbon.com/ribbon/2014/01/4abfddcc7dd9b467c9efededf16901c2.js"></script>
+  <div class="display-table">
+    <div class="display-table-cell">
+      <header class="container row">
+        <h1 class="center">
+          <%= image_tag 'logo_white.svg', :width => 500 %>
+        </h1>
+      </header>
+      <%= form_for('/search/results/', :url => url_for(:controller => 'food_item', :action => 'redirect_to_index'), method: "get") do %>
+          <!--<form id="search" class="container row">-->
+          <div class="search_bar container">
+            <div class="col span_8">
+              <%= text_field_tag :query %>
+            </div>
+            <div class="col span_2">
+              <%= select_tag :locale, options_for_select(['en', 'fr', 'es', 'de', 'zh-CHT', 'hi', 'ru', 'ar']) %>
+            </div>
+            <div class="col span_2">
+              <%= submit_tag("Search") %>
+            </div>
+          </div>
+      <% end %>
+      <footer class="container row">
+        <div class="icon-home">
+          Search your favorite food
+        </div>
+        <div class="icon-glasses">
+          see all ingredients
+        </div>
+        <div class="icon-pie-chart">
+          compare it with related food items
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="about-arrow-wrp">
+    <div class="about-arrow-content">
+      For more information scroll down
+    </div>
+  </div>
+</main>
+<div id="home-info-wrp" data-stellar-ratio="2">
+  <div class="fixed">
+    <div class="container">
+      <h1>
+        food mesh
+      </h1>
+    </div>
+    <div class="blue-bg">
+      <div class="container">
+        <p>
+          Food Mesh is a website where the user can compare food items according to their ingredients
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <h2>our awesome team</h2>
+      <ul id="home-user-menu" class="menu">
+        <li>
+          <a href="#">
+            <%= image_tag 'team/gudrun.jpg' %>
+            <h3>Gudrun Öhlinger</h3>
+
+            <p>
+              MMA
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag 'team/nora.jpg' %>
+            <h3>Nora Sieß</h3>
+
+            <p>
+              MMA
+            </p>
+          </a>
+
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag 'team/marie.jpg' %>
+            <h3>Marie-Therese Schweitl</h3>
+
+            <p>
+              MMA
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag 'team/franzi.jpg' %>
+            <h3>Franziska Oberhauser</h3>
+
+            <p>
+              MMT(Backend Development, Frontend Development, Translations)
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <%= image_tag 'team/thomas.jpg' %>
+            <h3>Thomas Mayrhofer</h3>
+
+            <p>
+              MMT (Backend Development, Frontend Development, Food APIs)
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

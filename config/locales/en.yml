@@ -1,0 +1,40 @@
+##
+# university:  University of Applied Sciences Salzburg
+# studie:      MultiMediaTechnology
+# usage:	    Multimediaprojekt 2a (MMP2a)
+# author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+#              - Franziska Oberhauser
+
+en:
+  alcohol:              alcohol
+  calcium:              calcium
+  calories:             calories
+  carbohydrate:         carbohydrate
+  chlorine:             chlorine
+  cholesterol:          cholesterol
+  copper:               copper
+  empty_item_basket:    "no elements in this list"
+  fat:                  fat
+  fiber:                fiber
+  iron:                 iron
+  magnesium:            magnesium
+  manganese:            manganese
+  man:                  man
+  monounsaturated_fat:  monounsaturated fat
+  phosphor:             phosphor
+  polyunsaturated_fat:  polyunsaturated fat
+  potassium:            potassium
+  protein:              protein
+  saturated_fat:        saturated fat
+  sodium:               sodium
+  sugar:                sugar
+  sulfur:               sulfur
+  vitamin_a:            vitamin A
+  vitamin_b1:           vitamin B1
+  vitamin_b2:           vitamin B2
+  vitamin_b6:           vitamin B6
+  vitamin_c:            vitamin C
+  vitamin_e:            vitamin E
+  water:                water
+  woman:                woman
+  zinc:                 zinc

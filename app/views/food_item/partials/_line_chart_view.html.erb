@@ -1,0 +1,78 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+
+<% if @chart.nil? %>
+    <div class="error">
+      <h1>please add some items to the user basket</h1>
+
+      <p>
+        if you don't want to add some items you can enjoy some bacon
+      </p>
+      <%= image_tag 'http://25.media.tumblr.com/d3025413adff4f9e413f1253d11834e6/tumblr_mkqjpvPA7i1s5orbto1_500.gif' %>
+    </div>
+<% else %>
+    <div class="container info-boxes row">
+      <div class="info-boxes-wrp clearfix">
+        <% if user_session.fetch_user_items.class == Array %>
+            <% user_session.fetch_user_items.each_with_index do |item, idx| %>
+                <div class="span_4 col">
+                  <h3 data-item-idx="<%= item['_id'] %>">
+                    <%= item['name'] %>
+                  </h3>
+                </div>
+                <% if (idx+1)%4 == 0 %>
+                    </div>
+                    <div class="info-boxes-wrp clearfix">
+                <% end %>
+            <% end %>
+        <% end %>
+        </div>
+        </div>
+    <br>
+    <h1>Compare the food products in your basket</h1>
+    <svg width="100%" id="line-chart" viewBox="<%= "0 0 #{@chart[:dimensions][:width]} #{@chart[:dimensions][:height] + 50}" %> " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+      <% @chart[:items].each_with_index do |item, idx| %> <!-- later: foreach of the value hashes -->
+          <path id="item-<%= item[:id] %>"
+                class="line-chart-line"
+                d="<%= item[:path] %>"
+                stroke-linecap="round"
+                stroke="<%= @chart[:colors][Random.rand(7)] %>"
+                stroke-width="4"
+                fill="none"></path>
+      <% end %>
+      <% @chart[:labels].each_with_index do |label, idx| %>
+          <text x="<%= @chart[:label_space] * idx %>" y="<%= @chart[:dimensions][:height] + 20 %>" transform="rotate(45, <%= "#{@chart[:label_space] * idx}, #{@chart[:dimensions][:height] + 20}" %>)">
+            <%= label %>
+          </text>
+          <line x1="<%= @chart[:label_space] * idx %>"
+                y1="0"
+                x2="<%= @chart[:label_space] * idx %>"
+                y2="<%= @chart[:dimensions][:height] %>"
+                stroke-width="1"
+                stroke-dasharray="20,10"
+                style="stroke: rgba(0,0,0,0.16);"></line>
+      <% end %>
+      <line
+      x1="0"
+      y1="<%= @chart[:dimensions][:height] + 3 %>"
+      x2="<%= @chart[:dimensions][:width] %>"
+      y2="<%= @chart[:dimensions][:height] + 3 %>"
+      stroke-width="1.5"
+      style="stroke: black;"></line>
+      <line
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="<%= @chart[:dimensions][:height] + 3 %>"
+      stroke-width="1.5"
+      style="stroke: black;"></line>
+
+
+    </svg>
+<% end %>

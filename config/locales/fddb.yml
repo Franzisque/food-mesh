@@ -1,0 +1,71 @@
+##
+# university:  University of Applied Sciences Salzburg
+# studie:      MultiMediaTechnology
+# usage:	    Multimediaprojekt 2a (MMP2a)
+# author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+#              - Franziska Oberhauser
+
+
+fddb:
+
+#other:
+  name:                    "name"
+  amount:                  "amount"
+  amount_mesureing_sytem:  "mass"
+  aggregate_state:         "aggregate_state"
+  kh_gram:                 "kh"
+  amount_measuring_system: "ams"
+
+#selection:
+  kcal:                    "calories"
+  protein_gram:            "protein"
+  fat_gram:                "fat"
+  fat_sat_gram:            "saturated_fat"
+  #carbohydrate
+  sugar_gram:              "sugar"
+  df_gram:                 "fiber"
+  m_natrium_mg:            "sodium"
+
+#general:
+  kj:                      "kj"
+  kcal:                    "calories"
+  protein_gram:            "protein"
+  fat_gram:                "fat"
+  fat_sat_gram:            "saturated_fat"
+  #carbohydrate
+  sugar_gram:              "sugar"
+  df_gram:                 "fiber"
+  m_natrium_mg:            "sodium"
+  cholesterol_mg:          "cholesterol"
+  #polyunsaturated_fat
+  #monounsaturated_fat
+  alcohol_gram:            "alcohol"
+  water_gram:              "water"
+
+#vitamin:
+  v_a_mg:                  "vitamin_a"
+  v_b1_mg:                 "vitamin_b1"
+  v_b2_mg:                 "vitamin_b2"
+  v_b6_mg:                 "vitamin_b6"
+  v_b12_mg:                "vitamin_b12"
+  v_c_mg:                  "vitamin_c"
+  v_d_mg:                  "vitamin_d"
+  v_e_mg:                  "vitamin_e"
+
+#minerals
+  m_calcium_mg:            "calcium"
+  m_eisen_mg:              "iron"
+  m_phosphor_mg:           "phosphor"
+  m_zink_mg:               "zinc"
+  m_kupfer_mg:             "copper"
+  m_schwefel_mg:           "sulfur"
+  m_magnesium_mg:          "magnesium"
+  m_mangan_mg:             "manganese"
+  m_chlor_mg:              "chlorine"
+  #iodine
+  m_natrium_mg:            "sodium"
+  m_fluor_mg:              "fluorine "
+  m_kalium_mg:             "potassium"
+
+#double translations
+  v_calcium_mg:            "calcium"

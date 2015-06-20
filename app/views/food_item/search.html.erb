@@ -1,0 +1,37 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<div>
+  Search Result for: <%= params[:query] %>
+</div>
+
+<% if @food_items.length > 0 %>
+    <div class="first search-column">
+      <% @food_items.each_with_index do |result, i| %>
+          <% if (i % ((@food_items.length)/3).to_i == 0) && i != 0 %>
+              </div>
+              <div class="search-column">
+          <% end %>
+          <div class="search-element">
+            <%= link_to fetch_food_item_path(result['_id']) do %>
+                <% unless @name_translation.nil? %>
+                    <h2 class="name"><%= @name_translation[i] %></h2>
+                <% else %>
+                    <h1 class="name"><%= result[:name] %></h1>
+                <% end %>
+            <% end %>
+            <%= link_to '', add_item_to_basket_path(result['_id']), :class => 'icon-plus', :remote => true %>
+            <%= link_to '', fetch_food_item_path(result['_id']), :class => 'icon-pie-chart' %>
+          </div>
+      <% end %>
+      </div>
+<% else %>
+    <div>
+      no results found
+    </div>
+<% end %>

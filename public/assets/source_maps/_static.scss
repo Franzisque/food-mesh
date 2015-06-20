@@ -1,0 +1,25 @@
+/**
+ * main.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *              - Franziska Oberhauser (foberhauser.mmt-b2012@fh-salzburg.ac.at)
+ *
+ * About this file:
+ * ----------------
+ * This file is for defining static variables (mostly colors)
+ */
+
+$primaryDark: #1A1A1A;
+$primaryBlue: #205779;
+$primaryLight: #E6E6E6;
+
+$highlight: #2BA772;
+
+$secondaryDark: #222222;
+$boxShadowColor: rgba($primaryDark, 0.4);
+
+$headerHeight: 64px;
+

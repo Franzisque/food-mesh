@@ -1,0 +1,17 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+
+<h2>Latest Searches </h2>
+<ul class="info-list">
+  <% @latest_searches.each do |item| %>
+      <li>
+        <%= item['_id'] %>  <%= item['timestamp'].length %>
+      </li>
+  <% end %>
+</ul>

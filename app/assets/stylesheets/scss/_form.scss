@@ -1,0 +1,149 @@
+/**
+ * _form.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *
+ * About this file:
+ * ----------------
+ * This file is used for formular related styles
+ * Style of input fields etc.
+ *
+ * Structure:
+ * - reusable classes
+ *    - in the first section are all reusable classes which are used for the whole site
+ * - classes for special pages
+ *    - for special pages/items (eg. "home") which are used only once is the second
+ *      part of this document
+ *    - for this kind of classes use a wrapper id with the following naming
+ *      convention #<page>-<block>-<context>
+ */
+
+/**
+ * reusable classes
+ */
+form {
+  input[type=text], input[type=submit] {
+    border: none;
+    padding: 5px 10px;
+  }
+
+  .input-big {
+    width: 100%;
+  }
+  .field {
+    margin: 10px 0;
+    label {
+      display: block;
+      float: left;
+      width: 20%;
+      text-align: right;
+      padding: 5px 10px 5px 5px;
+    }
+    input {
+      border-radius: 5px;
+      width: 80%;
+      border: none;
+      padding: 5px;
+    }
+  }
+  .actions {
+    width: 80%;
+    float: right;
+    input {
+      border-radius: 5px;
+    }
+  }
+
+}
+
+input[type=submit], .button-search, .button {
+  background: $highlight;
+  color: $primaryLight;
+
+  width: 100%;
+  @include border-right-radius(5px);
+}
+
+/**
+ * special page styles
+ * naming convention for wrapper element #<page>-<block>-<context>
+ */
+#home-search-wrp, #header-wrp {
+  input {
+    padding: 7px 10px;
+  }
+  input[type=text] {
+    width: 100%;
+    @include border-left-radius(5px);
+    border-right: 1px solid $primaryLight;
+  }
+
+  select {
+    padding: 6px;
+    background: #fff;
+    border: none;
+    width: 100%;
+  }
+  select:focus {
+    outline: none;
+  }
+}
+
+#header-dropdown-wrp {
+  .search {
+    input {
+      width: 100%;
+    }
+  }
+}
+
+#header-wrp {
+  .input-big {
+    float: left;
+    width: 90% !important;
+  }
+
+  .button-search {
+    float: right;
+    position: relative;
+    width: 10% !important;
+    border: none;
+    height: 34px;
+  }
+
+  .button-search:before {
+    display: block;
+    content: "";
+  }
+
+  .button-search span {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+#user-settings, .edit-form {
+  label {
+    margin-bottom: 10px;
+  }
+
+  input, textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 3px 0 15px;
+    border: none;
+  }
+
+  textarea {
+    min-height: 300px;
+  }
+
+  input[type=submit] {
+    @include border-left-radius(5px);
+    padding: 10px;
+    margin-top: 15px;
+  }
+}

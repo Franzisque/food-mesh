@@ -1,0 +1,41 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<h1>Listing daily_intakes</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+    <th>Unit</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @daily_intakes.each do |daily_intake| %>
+      <tr>
+        <td><%= daily_intake.key %></td>
+        <td><%= daily_intake.value %></td>
+        <td><%= daily_intake.unit %></td>
+        <td><%= daily_intake.category %></td>
+        <td><%= link_to 'Show', daily_intake %></td>
+        <td><%= link_to 'Edit', edit_daily_intake_path(daily_intake) %></td>
+        <td><%= link_to 'Destroy', daily_intake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daily intake', new_daily_intake_path %>

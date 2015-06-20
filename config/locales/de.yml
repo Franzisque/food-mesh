@@ -1,0 +1,42 @@
+##
+# university:  University of Applied Sciences Salzburg
+# studie:      MultiMediaTechnology
+# usage:	    Multimediaprojekt 2a (MMP2a)
+# author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+#              - Franziska Oberhauser
+
+
+# german translations in alphabetical order
+de:
+  alcohol:              Alkohol
+  calcium:              Calcium
+  calories:             Kalorien
+  carbohydrate:         Kohlenhydrat
+  chlorine:             Chlor
+  cholesterol:          Cholesterin
+  copper:               Kupfer
+  empty_item_basket:    "kein Element in dieser Liste"
+  fat:                  Fett
+  fiber:                Ballaststoff
+  iron:                 Eisen
+  magnesium:            Magnesium
+  manganese:            Mangan
+  man:                  Mann
+  monounsaturated_fat:  ungesättigte Fettsäuren
+  phosphor:             Phosphor
+  polyunsaturated_fat:  mehrfach ungesättigte Fettsäure
+  potassium:            Kalium
+  protein:              Eiweiß
+  saturated_fat:        gesättigte Fettsäuren
+  sodium:               Natrium
+  sugar:                Zucker
+  sulfur:               Schwefel
+  vitamin_a:            Vitamin A
+  vitamin_b1:           Vitamin B1
+  vitamin_b2:           Vitamin B2
+  vitamin_b6:           Vitamin B6
+  vitamin_c:            Vitamin C
+  vitamin_e:            Vitamin E
+  water:                Wasser
+  woman:                Frau
+  zinc:                 Zink

@@ -1,0 +1,51 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+<h1>User Settings</h1>
+<%= form_for 'user_settings', remote: true, url: { controller: 'user_session', action: 'change_user_settings' } do |f| %>
+    <%= f.label :user_settings_weight %><br>
+    <%= f.text_field :user_settings_weight, :placeholder => 'weight', :value => @user_session.fetch_user_settings[:weight] %>
+    <%= f.label :user_settings_age %><br>
+    <%= f.text_field :user_settings_age, :placeholder => 'age', :value => @user_session.fetch_user_settings[:age] %>
+    <%= f.label :user_settings_height %><br>
+    <%= f.text_field :user_settings_height, :placeholder => 'height', :value => @user_session.fetch_user_settings[:height] %>
+
+
+    <%= f.label :user_settings_sex %><br>
+    <div class="radio-toolbar">
+      <%= f.radio_button :user_settings_sex, 'man' %>
+      <%= f.label :user_settings_sex, t("man"), :value => 'man' %>
+      <%= f.radio_button :user_settings_sex, 'woman', :checked => true %>
+      <%= f.label :user_settings_sex, t("woman"), :value => 'woman' %>
+    </div>
+    <%= f.submit "save changes" %>
+
+<% end %>
+<h1> Select Language </h1>
+<ul>
+  <li>
+    <%= link_to "french", change_lang_path(:locale => "fr") %>
+  </li>
+  <li>
+    <%= link_to "spanish", change_lang_path(:locale => "es") %>
+  </li>
+  <li>
+    <%= link_to "german", change_lang_path(:locale => "de") %>
+  </li>
+  <li>
+    <%= link_to "chinese", change_lang_path(:locale => "zh-CHT") %>
+  </li>
+  <li>
+    <%= link_to "hindu", change_lang_path(:locale => "hi") %>
+  </li>
+  <li>
+    <%= link_to "russian", change_lang_path(:locale => "ru") %>
+  </li>
+  <li>
+    <%= link_to "arabic", change_lang_path(:locale => "ar") %>
+  </li>
+</ul>

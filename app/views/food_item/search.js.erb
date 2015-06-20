@@ -1,0 +1,9 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+window.history.pushState(null, "Title", '/<%= "#{params[:locale]}/search/#{params[:query]}" %>');
+$('#main-inner-wrp').html('<%= j render :template => 'food_item/search.html.erb' %>');

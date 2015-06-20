@@ -1,0 +1,140 @@
+/**
+ * _layout.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *
+ * About this file:
+ * ----------------
+ * This file is used for font/text related styles
+ * eg. links, paragraphs,...
+ *
+ * Structure:
+ * - reusable classes
+ *    - in the first section are all reusable classes which are used for the whole site
+ * - classes for special pages
+ *    - for special pages/items (eg. "home") which are used only once is the second
+ *      part of this document
+ *    - for this kind of classes use a wrapper id with the following naming
+ *      convention #<page>-<block>-<context>
+ */
+
+@import "fontface";
+
+/**
+ * reusable classes
+ */
+* {
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+  font-weight: 100;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $primaryDark;
+}
+
+.highlighted {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.info-boxes {
+  background: $highlight;
+
+  h3 {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  span {
+    display: block;
+    color: #fff;
+
+    &.highlighted {
+      font-weight: 100;
+      float: left;
+    }
+    &.simple {
+      float: right;
+    }
+  }
+}
+
+/**
+ * special page styles
+ * naming convention for wrapper element #<page>-<block>-<context>
+ */
+#header-wrp {
+  a {
+    color: $primaryLight;
+  }
+}
+
+#header-dropdown-wrp {
+  color: $primaryLight;
+
+  h1 {
+    margin-top: 30px;
+    font-weight: 100;
+  }
+
+  nav#secondary {
+    margin: 20px 0;
+    text-align: center;
+
+    a {
+      padding: 10px;
+      background: $highlight;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background: $secondaryDark;
+      border-radius: 2px;
+    }
+
+    a:before {
+      margin-right: 5px;
+    }
+  }
+
+  a {
+    color: $primaryLight;
+  }
+
+  .header {
+    font-size: 25px;
+    font-weight: 100;
+
+    .info a {
+      padding: 5px 7px;
+      border-radius: 5px;
+      font-size: 80%;
+      display: inline-block;
+      background: $highlight;
+    }
+  }
+}
+
+.food-item-actions {
+  text-align: center;
+  margin-top: 10px;
+
+  a {
+    display: inline-block;
+    padding: 10px;
+    background: $highlight;
+    border-radius: 5px;
+  }
+}

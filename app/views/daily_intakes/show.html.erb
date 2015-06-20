@@ -1,0 +1,32 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @daily_intake.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @daily_intake.value %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @daily_intake.unit %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @daily_intake.category %>
+</p>
+
+<%= link_to 'Edit', edit_daily_intake_path(@daily_intake) %> |
+<%= link_to 'Back', daily_intakes_path %>

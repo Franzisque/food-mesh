@@ -1,0 +1,53 @@
+/**
+ * pie_chart.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *              - Franziska Oberhauser
+ */
+
+.pie-item {
+  text {
+    opacity: 1;
+    width: 300px;
+    display: block;
+  }
+
+  .pie-path {
+    stroke: $primaryLight;
+    stroke-width: 6px;
+
+    //most awesome sass code i ever wrote
+    $colorTypes: (low, medium, high, ultra-high);
+    @for $i from 0 to length($colorTypes) {
+      &.color-amount-#{unquote(nth($colorTypes, $i+1))} {
+        fill: mix($highlight, $primaryBlue, $i*length($colorTypes));
+      }
+    }
+  }
+}
+
+.pie-chart-lines {
+  stroke: $tertiaryDark;
+  stroke-width: 1px;
+}
+
+#max-daily-amount {
+  stroke: $secondaryLight;
+  stroke-width: 2px;
+}
+
+.pie-path-back {
+  fill: rgba(0, 0, 0, 0);
+}
+
+.pie-item-back:hover {
+  fill: red;
+}
+
+#ingredient-vitamin_a:hover .pie-item {
+  fill: red;
+
+}

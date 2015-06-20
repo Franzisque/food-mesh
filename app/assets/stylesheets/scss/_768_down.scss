@@ -1,0 +1,55 @@
+/**
+ * _768_down.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *
+ * About this file:
+ * ----------------
+ * styles for devices smaller than 768px
+ */
+
+@media (max-width: 768px) {
+  #header-dropdown-wrp {
+    position: absolute;
+    top: 0;
+
+    form {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      input {
+        float: left;
+      }
+
+      button {
+        position: relative;
+        float: right;
+        margin-top: -30px;
+        height: 30px;
+        width: 150px;
+        border: none;
+      }
+    }
+
+    .content {
+      .ingredient {
+        width: 33.33%;
+      }
+    }
+  }
+
+  .responsive-hide {
+    display: none;
+  }
+
+  .responsive-show {
+    display: block;
+  }
+
+  .responsive-show-inline {
+    display: inline-block;
+  }
+}

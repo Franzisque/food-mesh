@@ -1,0 +1,92 @@
+/**
+ * _import.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *
+ * About this file:
+ * ----------------
+ * This is the import file for iconmoon icon-fonts
+ */
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('scss/fonts/icomoon/icomoon.eot');
+  src: url('scss/icomoon.eot?#iefix') format('embedded-opentype'), url('scss/fonts/icomoon/icomoon.ttf') format('truetype'), url('scss/fonts/icomoon/icomoon.woff') format('woff'), url('scss/fonts/icomoon/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-line-chart:before {
+  content: "\e20b";
+}
+.icon-home:before {
+  content: "\e000";
+}
+.icon-pencil:before {
+  content: "\e00e";
+}
+.icon-search:before {
+  content: "\e1bb";
+}
+.icon-cog:before {
+  content: "\e1df";
+}
+.icon-basket:before {
+  content: "\e254";
+}
+.icon-glasses:before {
+  content: "\e274";
+}
+.icon-uniE275:before {
+  content: "\e275";
+}
+.icon-dashboard:before {
+  content: "\e295";
+}
+.icon-world:before {
+  content: "\e2c7";
+}
+.icon-close:before {
+  content: "\e36b";
+}
+.icon-plus:before {
+  content: "\e376";
+}
+.icon-leave:before {
+  content: "\e37e";
+}
+.icon-up-arrow:before {
+  content: "\e3b4";
+}
+.icon-right-arrow:before {
+  content: "\e3b5";
+}
+.icon-pie-chart:before {
+  content: "\e1fd";
+}
+.icon-remove:before {
+  content: "\e250";
+}
+.icon-left-arrow:before {
+  content: "\e3b7";
+}
+.icon-down-arrow:before {
+  content: "\e3b6";
+}

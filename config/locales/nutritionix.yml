@@ -1,0 +1,86 @@
+##
+# university:  University of Applied Sciences Salzburg
+# studie:      MultiMediaTechnology
+# usage:	    Multimediaprojekt 2a (MMP2a)
+# author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+#              - Franziska Oberhauser
+
+
+nutritionix:
+
+#other:
+  name:                   "name"
+  amount:                 "amount"
+  amount_mesureing_sytem: "mass"
+  aggregate_state:        "aggregate_state"
+  serving_weight:         "portion"
+  serving_weight_uom:     "uom" #unit of measurement
+  calories_from_fat:      "calories_fat"
+  kh_gram:                "kh"
+  serving_weight_grams:   "grams_of_sample"
+  serving_size_qty:       "lot"  #number of items
+  serving_size_unit:      "ssu"
+  refuse_pct:             "refuse"
+  ingredient_statement:   "ingredients"
+  servings_per_container: "portions"
+  trans_fatty_acid:       "trans_fatty_acid"
+
+#selection:
+  kcal:                   "calories"
+  protein_gram:           "protein"
+  fat_gram:               "fat"
+  fat_sat_gram:           "saturated_fat"
+  total_carbohydrate:     "carbohydrate"
+  kh_gram:                "kh"
+  sugars:                 "sugar"
+  dietary_fiber:          "fiber"
+  sodium:                 "sodium"
+
+#general:
+  kj:                     "kj"
+  kcal:                   "calories"
+  protein_gram:           "protein"
+  fat_gram:               "fat"
+  fat_sat_gram:           "saturated_fat"
+  total_carbohydrate:     "carbohydrate"
+  sugars:                 "sugar"
+  dietary_fiber:          "fiber"
+  sodium:                 "sodium"
+  cholesterol:            "cholesterol"
+  polyunsaturated_fat:    "polyunsaturated_fat"
+  monounsaturated_fat:    "monounsaturated_fat"
+  water_grams:            "water"
+  #alcohol
+
+#vitamin:
+  vitamin_a_dv:           "vitamin_a"
+  #vitamin_b1
+  #vitamin_b2
+  #vitamin_b6
+  #vitamin_b12
+  vitamin_c_dv:           "vitamin_c"
+  #vitamin_d
+  #vitamin_e
+
+
+#minerals
+  calcium_dv:             "calcium"
+  iron_dv:                "iron"
+  #phosphor
+  #zinc
+  #copper
+  #sulfur
+  #magnesium
+  #manganese
+  #chlorine
+  #iodine
+  sodium:                 "sodium"
+  #fluorine
+  #potassium
+
+#double translations
+  sugar_gram:             "sugar_gram"
+  protein:                "protein"
+  calories:               "calories"
+  saturated_fat:          "saturated_fat"
+  total_fat:              "fat"

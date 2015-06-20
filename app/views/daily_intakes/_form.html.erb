@@ -1,0 +1,44 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+<%= form_for(@daily_intake) do |f| %>
+    <% if @daily_intake.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@daily_intake.errors.count, "error") %> prohibited this daily_intake from being saved:</h2>
+
+          <ul>
+            <% @daily_intake.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :key %>
+      <br>
+      <%= f.text_field :key %>
+    </div>
+    <div class="field">
+      <%= f.label :value %>
+      <br>
+      <%= f.text_field :value %>
+    </div>
+    <div class="field">
+      <%= f.label :unit %>
+      <br>
+      <%= f.select :unit, %w( g mg kcal l ) %>
+    </div>
+    <div class="field">
+      <%= f.label :category %>
+      <br>
+      <%= f.select :category, %w( selection general vitamin mineral ) %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

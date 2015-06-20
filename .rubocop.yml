@@ -1,0 +1,19 @@
+AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+StringLiterals:
+  Enabled: false
+
+
+
+LineLength:
+  Max: 220
+
+MethodLength:
+  Max: 100
+
+Documentation:
+  Enabled: false
+
+EndOfLine:
+  Enabled: false

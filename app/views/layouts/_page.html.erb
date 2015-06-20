@@ -1,0 +1,21 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<div id="header-wrp" class="clearfix">
+  <%= render 'layouts/_partials/header' %>
+</div>
+<section id="main-content-wrp" class="container row">
+  <main class="span_8 col">
+    <div class="main-inner-wrp" id="main-inner-wrp">
+      <%= yield %>
+    </div>
+  </main>
+  <section id="header-dropdown-wrp" class="span_4 col">
+    <%= render 'layouts/_partials/sidebar' %>
+  </section>
+</section>

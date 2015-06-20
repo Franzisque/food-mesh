@@ -1,0 +1,21 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<%= form_for('search/results/', :html => { :class => 'responsive-show clearfix search' }, :url => url_for(:controller => 'food_item', :action => 'redirect_to_index'), method: "get") do |f| %>
+    <!--<form id="search" class="container row">-->
+    <%= text_field_tag :query %>
+    <button class="button-search icon-search" type="submit">
+      <span>Search</span>
+    </button>
+<% end %>
+<div id="user-basket" class="active">
+  <%= render :template => 'user_session/_add_items_to_basket' %>
+</div>
+<div id="user-settings">
+  <%= render :template => 'user_session/change_user_settings' %>
+</div>

@@ -1,0 +1,20 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	    Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<h2>all users</h2>
+<ul class="info-list">
+  <% @users.each do |user| %>
+      <li>
+        <%= user['email'] %>
+        <%= link_to 'delete user', user_delete_path(user['_id']), :class => 'icon-close' %>
+      </li>
+  <% end %>
+</ul>
+
+<%= link_to 'new user', new_user_path, :class => 'button' %>
+

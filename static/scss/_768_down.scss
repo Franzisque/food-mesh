@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+
+  #header-dropdown-wrp {
+    position: absolute;
+    top: 0;
+
+    form {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      input {
+        float: left;
+      }
+
+      button {
+        position: relative;
+        float: right;
+        margin-top: -30px;
+        height: 30px;
+        width: 150px;
+        border: none;
+      }
+    }
+
+    .content {
+      .ingredient {
+        width: 33.33%;
+      }
+    }
+  }
+
+  .responsive-hide {
+    display: none;
+  }
+
+  .responsive-show {
+    display: block;
+  }
+
+  .responsive-show-inline {
+    display: inline-block;
+  }
+}

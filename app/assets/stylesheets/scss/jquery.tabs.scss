@@ -1,0 +1,22 @@
+/**
+ * jquery.tabs.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *
+ * About this file:
+ * ----------------
+ * this are some basic styles for the jquery tabs plugin
+ */
+
+#header-dropdown-wrp {
+  &> div {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}

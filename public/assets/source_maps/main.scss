@@ -1,0 +1,41 @@
+/**
+ * main.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *              - Franziska Oberhauser (foberhauser.mmt-b2012@fh-salzburg.ac.at)
+ *
+ * About this file:
+ * ----------------
+ * This is just a collection of sass imports for a better overview
+ */
+
+@import "../vendor/normalize.css";
+@import "../vendor/responsive.gs.12col.css";
+@import "../vendor/bourbon/bourbon";
+@import "scss/static";
+@import "scss/layout";
+@import "scss/font";
+@import "scss/form";
+@import "scss/not_for_production!!!";
+@import "scss/768_down";
+@import "scss/1200_up";
+@import "scss/jquery.tabs";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

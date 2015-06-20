@@ -1,0 +1,9 @@
+#header-dropdown-wrp {
+  &> div {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}

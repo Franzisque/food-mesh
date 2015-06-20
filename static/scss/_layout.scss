@@ -1,0 +1,322 @@
+/**
+ * _layout.scss
+ *
+ * university:  University of Applied Sciences Salzburg
+ * studie:      MultiMediaTechnology
+ * usage:	    Multimediaprojekt 2a (MMP2a)
+ * author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+ *              - Franziska Oberhauser (foberhauser.mmt-b2012@fh-salzburg.ac.at)
+ *
+ * About this file:
+ * ----------------
+ * This file is used for layout propose only.
+ * Positions of elements (Responsive Breakpoints, float, margin, paddings) belonge here.
+ *
+ * Structure:
+ * - reusable classes
+ *    - in the first section are all reusable classes which are used for the whole site
+ * - classes for special pages
+ *    - for special pages/items (eg. "home") which are used only once is the second
+ *      part of this document
+ *    - for this kind of classes use a wrapper id with the following naming
+ *      convention #<page>-<block>-<context>
+ */
+
+@import "modules/verticalCentering";
+
+/**
+ * reusable classes
+ */
+
+html {
+  overflow-y: scroll;
+}
+
+html, body {
+  height: 100%;
+  background: $primaryLight;
+
+}
+
+main {
+  padding: $headerHeight 10px 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &.menu li {
+    float: left;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.overlay-hide {
+  display: none;
+}
+
+.responsive-show {
+  display: none;
+}
+
+.main-inner-wrp {
+  padding-top: 50px;
+}
+
+#header-wrp {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: $headerHeight;
+  background: $primaryBlue;
+
+  @include box-shadow(0 0px 2px 2px $boxShadowColor);
+
+  .logo-small-wrp {
+    width: 15%;
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .icon-wrp {
+    width: 25%;
+
+    .menu {
+      float: right;
+    }
+
+    a {
+      position: relative;
+      margin-left: 1px;
+      padding: 15px;
+      display: block;
+    }
+
+    a.active:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-top: 18px;
+      margin-left: -8px;
+      left: 50%;
+      margin-right: -50%;
+      background: $primaryDark;
+      z-index: 9999;
+
+      //border-top: 2px solid black;
+      //border-right: 2px solid black;
+
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+    }
+  }
+
+  .search-form-wrp {
+    width: 50%;
+  }
+}
+
+/**
+ * special page styles
+ * naming convention for wrapper element #<page>-<block>-<context>
+ */
+#home-search-wrp {
+  background: $primaryBlue;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 99;
+  margin: 0;
+
+  .display-table-cell {
+
+    padding-bottom: 200px;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+    float: left;
+    font-weight: 100;
+    width: 33.33%;
+    text-align: center;
+    color: $primaryLight;
+  }
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: icomoon;
+    display: block;
+    box-sizing: content-box;
+    font-size: 50px;
+    background: $highlight;
+
+    padding: 30px;
+    margin: 100px auto 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .about-arrow-wrp {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .about-arrow-content {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #ffff00;
+  }
+}
+
+#home-info-wrp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+
+  .fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50px;
+  }
+}
+
+#home-user-menu {
+  &.menu {
+    li {
+      width: 20%;
+      padding: 2px;
+    }
+  }
+}
+
+#header-dropdown-wrp {
+  z-index: 9998;
+  height: 100%;
+  padding: $headerHeight 10px;
+
+  @include box-shadow(0 0px 2px 2px $boxShadowColor);
+
+  background: $primaryDark;
+  border: 2px solid black;
+
+  ul {
+    padding: 8px 0 0px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $secondaryDark;
+    span {
+      display: block;
+    }
+  }
+
+  .header > * {
+    display: inline-block;
+  }
+
+  .ingredient {
+    width: 50%;
+    float: left;
+    padding: 5px 0;
+
+    span {
+      width: 50%;
+      float: left;
+    }
+
+    .simple {
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+
+  li.compare-link-wrp {
+    padding-top: 10px;
+    background: #ddd;
+  }
+}
+
+#form-suggestion-overlay {
+  position: absolute;
+  background: #ddd;
+  width: 60%;
+  padding: 10px;
+  z-index: 9999;
+
+  a {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  li:last-child a {
+    border-bottom: none;
+  }
+}
+
+#search-result-wrp {
+  li {
+    float: left;
+    width: 25%;
+    padding: 2px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    position: relative;
+    background: #bbb;
+    height: 220px;
+  }
+
+  .content-wrp {
+    padding: 10px;
+  }
+
+  .special-ingredients {
+    right: 0;
+    position: absolute;
+    margin-right: 4px;
+    z-index: 10;
+
+    li {
+      position: relative;
+      width: auto;
+      background: #ddd;
+      padding: 10px 7px;
+      margin-left: 2px;
+      margin-top: -4px;
+
+      span {
+        position: absolute;
+        top: -9999px;
+      }
+    }
+  }
+}
+
+#search-result-load-more {
+  position: relative;
+  width: auto;
+  text-align: center;
+}

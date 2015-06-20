@@ -1,0 +1,42 @@
+<%
+   # university:  University of Applied Sciences Salzburg
+   # studie:      MultiMediaTechnology
+   # usage:	      Multimediaprojekt 2a (MMP2a)
+   # author:      - Thomas Mayrhofer (thomas@mayrhofer.at)
+   #              - Franziska Oberhauser
+%>
+
+<h1>Elements in Comparison-Basket </h1>
+<nav id="secondary">
+  <%= link_to "delete all items", bulk_delete_basket_path, :class => 'icon-remove', :remote => true %>
+  <%= link_to "compare items", compare_items_path, :class => 'icon-line-chart' %>
+</nav>
+
+<ul id="food-item-list">
+  <% if user_session.fetch_user_items.class == Array %>
+      <% user_session.fetch_user_items.each_with_index do |item, idx| %>
+          <li data-item-idx="<%= item['_id'] %>">
+            <span class="header">
+              <span class="name"><%= item['name'] %></span>
+              <span class="info">
+                <%= link_to '', fetch_food_item_path(item['_id']), :class => 'icon-pie-chart'%>
+                <%= link_to '', delete_item_from_basket_path(idx), :class => 'icon-remove', :remote => true %>
+              </span>
+            </span>
+            <span class="content clearfix">
+            <% item['nutritions'].each do |key, value| %>
+              <% if print_nutrition_element? key %>
+                <span class="ingredient">
+                    <span class="highlighted"><%= I18n.t key %></span>
+                    <span class="simple"><%= value %></span>
+                </span>
+              <% end %>
+            <% end %>
+            </span>
+
+
+          </li>
+      <% end %>
+  <% end %>
+</ul>
+
